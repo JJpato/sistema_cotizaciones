@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Sistema de Cotizaciones</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('dashboard.dashboard_view') }}">Inicio</a></li>
+            <li><a href="{{ url_for('cotizaciones.cotizaciones_view') }}">Cotizaciones</a></li>
+            <li><a href="{{ url_for('clientes.clientes_view') }}">Clientes</a></li>
+            <li><a href="{{ url_for('usuarios.usuarios_view') }}">Usuarios</a></li>
+            <li><a href="{{ url_for('facturas.facturas_view') }}">Facturas</a></li>
+            <li><a href="{{ url_for('productos.productos_view') }}">Productos</a></li>
+            <li><a href="{{ url_for('servicios.servicios_view') }}">Servicios</a></li>
+            <li><a href="{{ url_for('inventario.inventario_view') }}">Inventario</a></li>
+            <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+        </ul>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>

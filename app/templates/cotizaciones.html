@@ -1,0 +1,9 @@
+from flask import Blueprint, render_template
+from flask_login import login_required
+
+cotizaciones = Blueprint('cotizaciones', __name__)
+
+@cotizaciones.route('/cotizaciones')
+@login_required
+def cotizaciones_view():
+    return render_template('cotizaciones.html')
